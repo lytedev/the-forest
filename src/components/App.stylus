@@ -1,0 +1,16 @@
+*, *::before, *::after
+  box-sizing border-box
+
+body, html
+  background #111
+  color #fff
+  margin 0
+  padding 0
+
+#app
+  display flex
+
+  .resource
+    .cooldown-circle
+      width 1em
+      height auto
