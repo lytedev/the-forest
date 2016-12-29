@@ -1,4 +1,4 @@
-# the-forest
+# The Forest
 
 > An incremental game about starting a forest in a desert.
 
