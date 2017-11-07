@@ -1,20 +1,23 @@
 #app
   .controls
-    button(v-on:click="plantSeed(1)") Plant a Seed
+    button(v-on:click="plantSeed(1)" v-bind:disabled="!canPlant") Plant a Seed
 
-  .resources
-    .resource Trees
-      span.value {{ numTrees }}
-      cooldown-circle(v-show="numTrees > 0")
+  table.resources
+    tr.resource Trees
+      td.value {{ numTrees }}
+      td: cooldown-circle(v-show="numTrees > 0")
 
-    .resource Seedlings
-      span.value {{ numSeedlings }}
-      cooldown-circle(v-show="numSeedlings > 0" v-bind:percent="seedlingCountdown")
+    tr.resource Saplings
+      td.value {{ numSaplings }}
+      td: cooldown-circle(v-show="numSaplings > 0")
 
-    .resource Saplings
-      span.value {{ numSaplings }}
-      cooldown-circle(v-show="numSaplings > 0")
+    tr.resource Seedlings
+      td.value {{ numSeedlings }}
+      td: cooldown-circle(v-show="numSeedlings > 0" v-bind:percent="seedlingCountdown")
 
-    .resource Seeds
-      span.value {{ seeds }}
+    tr.resource Seeds
+      td.value {{ seeds }}
 
+  p Trees: {{ trees }}
+  p Saplings: {{ saplings }}
+  p Seedlings: {{ seedlings }}

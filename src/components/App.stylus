@@ -1,16 +1,41 @@
 *, *::before, *::after
   box-sizing border-box
 
-body, html
+html
+  font-size 62.5%
+
+body
+  font-family 'Lato', 'Ubuntu', 'Lucida Grande', 'Segoe UI', sans-serif
+  font-size 1.8rem
   background #111
   color #fff
   margin 0
   padding 0
 
+button
+  font inherit
+  background #333
+  border-radius 0.25em
+  padding 0.25em 0.5em
+  border 0
+  color inherit
+  transition background-color 0.2s ease
+
+  &:disabled
+    color #888
+
 #app
   display flex
+  flex-direction column
+  padding 0.25em
 
   .resource
+    .value
+      padding-left 0.5em
     .cooldown-circle
+      margin-left 0.5em
       width 1em
       height auto
+
+  .controls
+    margin-bottom 0.5em

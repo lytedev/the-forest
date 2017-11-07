@@ -22,6 +22,8 @@ CooldownCircle =
       y: y + (r * Math.sin(a))
 
     cooldownCirclePathDefinitionByPercent: (percent) ->
+      percent = parseFloat(percent)
+      if isNaN(percent) then percent = 0
       percent = percent % 1
       radius = 49
       start = { x: 50, y: 1 }
